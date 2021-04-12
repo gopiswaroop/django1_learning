@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>teacherreport</title>
+    <style>
+table, th, td {
+  border: 1px solid black;
+    border-collapse: collapse;
+  text-align: center;
+    padding: 15px;
+}
+th{
+    background-color: aqua;
+}
+</style>
+</head>
+<body>
+<h1>teacher report:2020-21</h1>
+<table style="width:80%">
+    <tr>
+        <th>id</th>
+    <th>name</th>
+    <th>exp</th>
+    <th>subject</th>
+    <th>contact</th>
+    <th>Actions</th>
+  </tr>
+{% for s in teacher_list %}
+<tr>
+    <td><a href="/ad/getteacher/{{s.id}}">{{s.id}}</a></td>
+    <td>{{s.name}}</td>
+    <td>{{s.exp}}</td>
+    <td>{{s.subject}}</td>
+    <td>{{s.contact}}</td>
+    <td>
+        <a href="/ad/delete/{{s.id}}">delete</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/ad/update/{{s.id}}">update</a>
+
+    </td>
+{% endfor %}
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>admin report</title>
+    <style>
+table, th, td {
+  border: 1px solid black;
+    border-collapse: collapse;
+  text-align: center;
+    padding: 15px;
+}
+th{
+    background-color: aqua;
+}
+</style>
+</head>
+<body>
+<h1>admission report:2020-21</h1>
+<table style="width:100%">
+    <tr>
+        <th>id</th>
+    <th>studentname</th>
+    <th>fathername</th>
+    <th>classname</th>
+    <th>contact</th>
+    <th>actions</th>
+  </tr>
+{% for s in allstudents %}
+<tr>
+    <td>{{s.id}}</td>
+    <td>{{s.name}}</td>
+    <td>{{s.fathername}}</td>
+    <td>{{s.classname}}</td>
+    <td>{{s.contact}}</td>
+    <td>
+        <a href="/ad/delete/{{s.id}}">delete</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/ad/update/{{s.id}}">update</a>
+
+    </td>
+{% endfor %}
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static "stylesheets/style.css" %}"/>
+</head>
+<body>
+<h2><img src="{% static "images/apple.png" %}" width="100" height="100" alt="image not found"/>gopi django</h2>
+<br/><hr/><br/>
+<div class="module">
+    <h1>Admissions</h1><br/><br/>
+    <a href="/ad/newadmin" ><button type="button" name="button"><b><u>add admission</u></b></button></a><br/><br/>
+    <a href="/ad/adminreport" ><button type="button" name="button">admission report</button></a><br/><br/>
+</div>
+<div class="module">
+    <h1>Finance</h1><br/><br/>
+     <a href="/fin/feecol" ><button type="button" name="button">fee collection</button></a><br/><br/>
+     <a href="/fin/feerep" ><button type="button" name="button">fee report</button></a><br/><br/>
+     <a href="/fin/feedue" ><button type="button" name="button">fee due</button></a><br/><br/>
+</div>
+<br/>
+<br/>
+<a href="/accounts/logout">logout</a>
+<br/><br/>
+
+</body>
+</html>

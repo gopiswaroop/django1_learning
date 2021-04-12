@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add admissions page</title>
+    <link rel="stylesheet" href="{% static "stylesheets/style.css" %}"/>
+</head>
+<body>
+<h1>Hello this is aadd admissions page</h1>
+<img src="{% static "images/apple.png" %}" width="100" height="100" alt="image not found"/>
+<h2>please fill below applicaton</h2><br/><br/>
+<form method="post">
+    <table>
+    {{form.as_table}}
+    </table>
+    <br/>
+<input type="submit" value="Add student">
+{% csrf_token %}
+<br/><br/>
+<!--{% for key,value in request.COOKIES.items %}-->
+<!--{{key}} - {{value}} <br/>-->
+<!--{% endfor %}-->
+{% for key,value in request.session.items %}
+{{key}} - {{value}} <br/>
+{% endfor %}
+</form>
+</body>
+</html>
